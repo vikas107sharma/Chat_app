@@ -1,0 +1,252 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@600&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap");
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/*////////////////////////////// main  /////////////////////////////////////*/
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+main::before {
+  content: "";
+  background: url("./images/5442673.jpg") no-repeat center center/cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+}
+
+/*/////////////////////////////// room  /////////////////////////////////////*/
+
+.join_room {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.join_room > input {
+  margin: 2px 0px;
+}
+
+.join_room > button {
+  width: 100%;
+  background: #ba0add;
+  color: #fff;
+  outline: none;
+  border: none;
+  height: 30px;
+}
+.join_room > button:hover {
+  background: #a300c4;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+/*/////////////////////////////// chat box /////////////////////////////////////*/
+
+.chat_box {
+  width: 350px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  color: #fff;
+}
+
+/*/////////////////////////////// top bar  /////////////////////////////////////*/
+
+.top_bar {
+  background: linear-gradient(to right, rgb(151, 51, 238), rgb(218, 34, 255));
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.logo {
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 1px 1px 2px rgb(151, 51, 238), 0 0 25px rgb(146, 146, 152),
+    0 0 5px rgb(146, 146, 154);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 2;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+/*/////////////////////////////// send btn  /////////////////////////////////////*/
+
+.send_btn {
+  width: 45px;
+  height: 41px;
+  border: none;
+  border-radius: 100%;
+  color: #fff;
+  outline: none;
+  background-color: #da22ff;
+  margin: 0 3px;
+}
+
+.send_btn:hover {
+  color: #fff;
+  outline: none;
+  background-color: #ba0add;
+}
+
+/*/////////////////////////////// time  /////////////////////////////////////*/
+
+.time {
+  width: 100%;
+  height: auto;
+  font-size: 7px;
+  display: flex;
+  padding: 5px 5px 0px 0px;
+}
+
+.time > span {
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 0.6rem;
+  color: #6d6d6d;
+}
+
+/*/////////////////////////////// message area  /////////////////////////////////////*/
+
+.message_area {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.message_box {
+  display: flex;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 0 15px 15px;
+}
+
+.message_box > input {
+  width: 100%;
+  border: 1px solid #da22ff;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.message_box > input:focus {
+  outline: none !important;
+  border-color: #d19fdb;
+  box-shadow: 0px 0px 5px 1px #da22ff;
+}
+
+/*/////////////////////////////// receive  /////////////////////////////////////*/
+
+.received_message {
+  display: flex;
+  width: auto;
+  margin: 5px 0 5px 0;
+}
+
+.r_message {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 80%;
+  border-radius: 0 15px 15px 15px;
+  flex-direction: column;
+  color: black;
+  padding: 10px 13px;
+  font-size: 1 rem;
+}
+
+.r_message > .author {
+  font-family: "Roboto", sans-serif;
+
+  color: #a300c4;
+}
+
+/*/////////////////////////////// send  /////////////////////////////////////*/
+.author {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: yellow;
+  font-weight: 550;
+}
+
+.sender_message {
+  display: flex;
+  width: auto;
+  margin: 5px 0 5px 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.s_message {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(195, 62, 218);
+  box-shadow: 0 0 20px 0 rgba(195, 62, 218, 0.3);
+  display: flex;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  max-width: 80%;
+  border-radius: 15px 0 15px 15px;
+  flex-direction: column;
+  padding: 10px 13px;
+  font-size: 1 rem;
+}
+
+.s_message > .time > span {
+  color: #ece7e7;
+}
+
+.message_area::-webkit-scrollbar {
+  display: none;
+}
