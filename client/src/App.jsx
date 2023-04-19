@@ -9,8 +9,9 @@ const App = () => {
   const [socket,setSocket] = useState()
 
   useEffect(()=>{
-    const newSocket = io.connect("http://localhost:3001");
+    // const newSocket = io.connect("http://localhost:3001");
     // const newSocket = io.connect("https://server-chat-app-backend.onrender.com/");
+    const newSocket = io.connect("https://serverchatappbackend.onrender.com");
     setSocket(newSocket);
     return () => newSocket.close();
   },[])
