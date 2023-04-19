@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chat";
 
-// const socket = io.connect("http://localhost:3001");
-
 const App = () => {
   const [room, setRoom] = useState("");
   const [username, setUsername] = useState("");
@@ -12,6 +10,7 @@ const App = () => {
 
   useEffect(()=>{
     const newSocket = io.connect("http://localhost:3001");
+    // const newSocket = io.connect("https://server-chat-app-backend.onrender.com/");
     setSocket(newSocket);
     return () => newSocket.close();
   },[])
@@ -36,7 +35,7 @@ const App = () => {
           />
           <input
             type="text"
-            placeholder="room..."
+            placeholder="roomID..."
             onChange={(e) => {
               setRoom(e.target.value);
             }}
